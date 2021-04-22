@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 const buttonVariants = {
   hover: {
-    scale: 1.1,
+    scale: [1, 1.1, 1, 1.1, 1, 1.1, 1],
     textShadow: '0px 0px 8px rgb(255,255,255)',
     boxShadow: '0px 0px 8px rgb(255,255,255)',
   },
@@ -20,7 +20,11 @@ const Home = () => {
     >
       <motion.h2 animate={{ fontSize: 50 }}>Welcome to Pizza Joint</motion.h2>
       <Link to='/base'>
-        <motion.button variants={buttonVariants} whileHover='hover'>
+        <motion.button
+          variants={buttonVariants}
+          whileHover='hover'
+          animate='visible'
+        >
           Create Your Pizza
         </motion.button>
       </Link>
